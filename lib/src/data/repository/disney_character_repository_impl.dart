@@ -32,4 +32,13 @@ class DisneyCharacterRepositoryImpl implements CharacterRepository {
       return const Left(CharacterServerFailure());
     }
   }
+
+  @override
+  Future<Either<Failure, List<CharacterModel>>> readAllByFilm({required String film}) async {
+    try {
+      return Right(await disneyDatasource.getModelByFilm(film));
+    } catch (e) {
+      return const Left(CharacterServerFailure());
+    }
+  }
 }
