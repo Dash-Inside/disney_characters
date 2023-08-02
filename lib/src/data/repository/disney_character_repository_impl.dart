@@ -18,7 +18,7 @@ class DisneyCharacterRepositoryImpl implements CharacterRepository {
     try {
       final CharacterModel getChar = await disneyDatasource.getModelByID(id as String);
       return Right(getChar);
-    } catch (e) {
+    } catch (_) {
       return const Left(CharacterServerFailure());
     }
   }
@@ -28,7 +28,7 @@ class DisneyCharacterRepositoryImpl implements CharacterRepository {
     try {
       final getList = await disneyDatasource.getModelsByName(name);
       return Right(getList);
-    } catch (e) {
+    } catch (_) {
       return const Left(CharacterServerFailure());
     }
   }
@@ -37,7 +37,7 @@ class DisneyCharacterRepositoryImpl implements CharacterRepository {
   Future<Either<Failure, List<CharacterModel>>> readAllByFilm({required String film}) async {
     try {
       return Right(await disneyDatasource.getModelByFilm(film));
-    } catch (e) {
+    } catch (_) {
       return const Left(CharacterServerFailure());
     }
   }

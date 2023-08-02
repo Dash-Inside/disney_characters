@@ -48,7 +48,11 @@ class DisneyDatasourceImpl implements DisneyDatasource {
 
   @override
   Future<List<CharacterModel>> getModelByFilm(String film) async {
-    var url = Uri.https("api.disneyapi.dev", "/character", {'films': film});
+    var url = Uri.https(
+      "api.disneyapi.dev",
+      "/character",
+      {'films': film},
+    );
 
     final http.Response response = await http.get(url);
     final jsonResult = jsonDecode(response.body)['data'];
