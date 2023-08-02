@@ -25,17 +25,26 @@ class ListCard extends StatelessWidget {
             borderRadius: BorderRadius.circular(8.0),
           ),
           child: Row(
-            children: const [
+            children: [
               SizedBox(
                 width: 100.0,
                 height: 100.0,
-                child: Placeholder(),
+                child: ClipRRect(
+                  borderRadius: BorderRadius.only(
+                    bottomLeft: Radius.circular(8.0),
+                    topLeft: Radius.circular(8.0),
+                  ),
+                  child: Image.network(
+                    'https://media.glamourmagazine.co.uk/photos/645123f9b153dcb8e4118150/16:9/w_1280,c_limit/DISNEY%20PRINCESS%20020523.jpg',
+                    fit: BoxFit.cover,
+                  ),
+                ),
               ),
               Padding(
                 padding: EdgeInsets.all(24.0),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
+                  children: const [
                     Text(
                       "Name",
                       style: TextStyle(
