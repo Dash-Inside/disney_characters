@@ -69,7 +69,9 @@ class HomePage extends StatelessWidget {
               height: 16.0,
             ),
             FilledButton(
-              onPressed: () {},
+              onPressed: () {
+                Navigator.of(context).pushNamed('/list');
+              },
               child: const Row(
                 crossAxisAlignment: CrossAxisAlignment.center,
                 mainAxisAlignment: MainAxisAlignment.center,
