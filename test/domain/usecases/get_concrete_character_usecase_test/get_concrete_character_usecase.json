@@ -1,0 +1,27 @@
+{
+    "info": {
+    "count": 1,
+    "totalPages": 1,
+    "previousPage": null,
+    "nextPage": null
+    },
+    "data": {
+    "_id": 666,
+    "films": [],
+    "shortFilms": [],
+    "tvShows": [
+    "Star vs. the Forces of Evil"
+    ],
+    "videoGames": [],
+    "parkAttractions": [],
+    "allies": [],
+    "enemies": [],
+    "sourceUrl": "https://disney.fandom.com/wiki/Jeremy_Birnbaum",
+    "name": "Jeremy Birnbaum",
+    "imageUrl": "https://static.wikia.nocookie.net/disney/images/8/8b/Jeremy_Birnbaum.png",
+    "createdAt": "2021-04-12T01:37:13.965Z",
+    "updatedAt": "2021-12-20T20:39:24.026Z",
+    "url": "https://api.disneyapi.dev/characters/666",
+    "__v": 0
+    }
+    }
