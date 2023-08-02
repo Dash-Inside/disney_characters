@@ -24,23 +24,31 @@ const List<String> cinemas = [
   "Stitch & Ai",
   "A Poem Is...",
   "It's a Small World: The Animated Series",
-  "At Home With Olaf"
+  "At Home With Olaf",
 ];
 const String imageLink = 'https://static.wikia.nocookie.net/disney/images/1/1f/Profile_-_Lilo.png';
 
 final List<Character> test1 = [character];
 
-// const DisneyCharacterRepositoryImpl disneyDatasource = ;
+const Character character = Character(
+  id: id,
+  name: name,
+  cinemas: cinemas,
+  imageLink: imageLink,
+);
 
-const Character character = Character(id: id, name: name, cinemas: cinemas, imageLink: imageLink);
 void main() {
-  group('get_all_characters_by_name_usecase_test', () {
-    test('_', () async {
+  test(
+    'get_all_characters_by_name_usecase_test',
+    () async {
       // Act
       final CharacterRepository characterRepository = MockCharacterRepository();
-      when(characterRepository.readAll(name: name)).thenAnswer((_) async {
-        return Right(test1);
-      });
+      when(characterRepository.readAll(name: name)).thenAnswer(
+        (_) async {
+          return Right(test1);
+        },
+      );
+
       // Arrange
       final GetAllCharactersByNameUseCase getAllCharactersByNameUseCase = GetAllCharactersByNameUseCase(
         characterRepository: characterRepository,
@@ -50,6 +58,6 @@ void main() {
       // Assert
       verify(characterRepository.readAll(name: name)).called(1);
       expect(res, Right(test1));
-    });
-  });
+    },
+  );
 }
