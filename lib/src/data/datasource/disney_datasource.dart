@@ -15,7 +15,7 @@ class DisneyDatasourceImpl implements DisneyDatasource {
       "/character/$id",
     );
     final http.Response response = await http.get(url);
-    return CharacterModel.fromJson(response.body);
+    return CharacterModel.fromJson(response.body["data"]);
   }
 
   @override
