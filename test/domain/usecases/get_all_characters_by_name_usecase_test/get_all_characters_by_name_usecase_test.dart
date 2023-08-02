@@ -33,6 +33,7 @@ final List<Character> test1 = [character];
 // const DisneyCharacterRepositoryImpl disneyDatasource = ;
 
 const Character character = Character(id: id, name: name, cinemas: cinemas, imageLink: imageLink);
+
 void main() {
   test(
     'get_all_characters_by_name_usecase_test',
