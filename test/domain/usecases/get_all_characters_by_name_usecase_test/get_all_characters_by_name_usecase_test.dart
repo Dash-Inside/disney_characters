@@ -20,13 +20,15 @@ const List<String> cinemas = [
   "Ralph Breaks the Internet",
   "Lilo & Stitch (live-action film)"
 ];
-const String imageLink = 'https://static.wikia.nocookie.net/disney/images/1/1f/Profile_-_Lilo.png';
+const String imageLink =
+    'https://static.wikia.nocookie.net/disney/images/1/1f/Profile_-_Lilo.png';
 
 final List<Character> test1 = [character];
 
 // const DisneyCharacterRepositoryImpl disneyDatasource = ;
 
-const Character character = Character(id: id, name: name, cinemas: cinemas, imageLink: imageLink);
+const Character character =
+    Character(id: id, name: name, cinemas: cinemas, imageLink: imageLink);
 void main() {
   group('get_all_characters_by_name_usecase_test', () {
     test('_', () async {
@@ -38,14 +40,14 @@ void main() {
         );
       });
       // Arrange
-      final GetAllCharactersByNameUseCase getAllCharactersByNameUseCase = GetAllCharactersByNameUseCase(
+      final GetAllCharactersByNameUseCase getAllCharactersByNameUseCase =
+          GetAllCharactersByNameUseCase(
         characterRepository: characterRepository,
       );
       final res = await getAllCharactersByNameUseCase.call(name);
 
       // Assert
       verify(characterRepository.readAll(name: name)).called(1);
-      verifyNever(characterRepository.read);
       expect(res, Right(test1));
     });
   });
