@@ -30,8 +30,11 @@ class ListPage extends StatelessWidget {
           ),
         ),
       ),
-      body: const Column(
+      body: ListView(
         children: [
+          ListCard(),
+          ListCard(),
+          ListCard(),
           ListCard(),
           ListCard(),
           ListCard(),
