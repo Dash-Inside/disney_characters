@@ -1,6 +1,7 @@
 import 'package:dartz/dartz.dart';
 import 'package:disney_characters/core/failure/failure.dart';
 import 'package:disney_characters/src/domain/entities/character.dart';
+import 'package:http/http.dart';
 
 abstract class CharacterRepository {
   /// [read] returns Either [Failure] if there is some errors or [Character] if there is no errors
@@ -10,4 +11,6 @@ abstract class CharacterRepository {
   /// [readAll] returns Either [Failure] if there is some errors or [List<Character>] if there is no errors
   /// [readAll] takes [name] that used for search [List<Character>] by [name]
   Future<Either<Failure, List<Character>>> readAll({required String name});
+
+  Future<Either<Failure, List<Character>>> readAllByFilm({required String film});
 }
