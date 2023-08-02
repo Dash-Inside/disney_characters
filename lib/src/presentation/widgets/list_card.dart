@@ -29,7 +29,14 @@ class ListCard extends StatelessWidget {
               SizedBox(
                 width: 100.0,
                 height: 100.0,
-                child: Placeholder(),
+                child: ClipRRect(
+                  borderRadius: BorderRadius.only(
+                    topLeft: Radius.circular(8.0),
+                    bottomLeft: Radius.circular(8.0),
+                  ),
+                  child: Image.network(
+                      'https://sun9-54.userapi.com/impg/c857528/v857528766/20689a/WEXzBsUoqcQ.jpg?size=1080x1080&quality=96&sign=bc14938b21b8c3e2d65fd57e6f63d7dc&type=album'),
+                ),
               ),
               Padding(
                 padding: const EdgeInsets.all(24.0),
