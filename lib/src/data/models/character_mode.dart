@@ -3,20 +3,22 @@ import 'package:disney_characters/src/domain/entities/character.dart';
 import 'dart:convert';
 
 class CharacterModel extends Character {
-  const CharacterModel(
-      {required super.id,
-      required super.name,
-      required super.cinemas,
-      required super.imageLink});
+  const CharacterModel({
+    required super.id,
+    required super.name,
+    required super.cinemas,
+    required super.imageLink,
+  });
 
   factory CharacterModel.fromMap(Map<String, dynamic> map) {
-    List<String> films = (map["films"] as List<String>);
-    List<String> short = (map["shortFilms"] as List<String>);
-    List<String> tvShow = (map["tvShows"] as List<String>);
+    final films = map["films"];
+    final short = map["shortFilms"];
+    final tvShow = map["tvShows"];
+
     return CharacterModel(
       id: (map['_id'] as int),
-      name: (map['Name'] as String),
-      cinemas: (films + short + tvShow),
+      name: (map['name'] as String),
+      cinemas: [...films, ...short, ...tvShow],
       imageLink: (map['imageUrl'] as String),
     );
   }
@@ -32,9 +34,10 @@ class CharacterModel extends Character {
     String? imageLink,
   ) {
     return CharacterModel(
-        id: id ?? this.id,
-        name: name ?? this.name,
-        cinemas: cinemas ?? this.cinemas,
-        imageLink: imageLink ?? this.imageLink);
+      id: id ?? this.id,
+      name: name ?? this.name,
+      cinemas: cinemas ?? this.cinemas,
+      imageLink: imageLink ?? this.imageLink,
+    );
   }
 }
