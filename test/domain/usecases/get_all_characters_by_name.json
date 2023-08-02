@@ -1,0 +1,63 @@
+{
+    "info": {
+        "count": 1,
+        "totalPages": 1,
+        "previousPage": null,
+        "nextPage": null
+    },
+    "data": {
+        "_id": 5195,
+        "films": [
+            "Lilo & Stitch",
+            "Lilo & Stitch 2: Stitch Has a Glitch",
+            "Stitch! The Movie",
+            "Leroy & Stitch",
+            "Once Upon a Halloween",
+            "Ralph Breaks the Internet",
+            "Lilo & Stitch (live-action film)"
+        ],
+        "shortFilms": [],
+        "tvShows": [
+            "Lilo & Stitch: The Series",
+            "Stitch!",
+            "Stitch & Ai",
+            "A Poem Is...",
+            "It's a Small World: The Animated Series",
+            "At Home With Olaf"
+        ],
+        "videoGames": [
+            "Lilo & Stitch (Game Boy Advance)",
+            "Lilo & Stitch: Trouble in Paradise",
+            "Lilo & Stitch 2: Hämsterviel Havoc",
+            "Disney Friends",
+            "Meteos: Disney Magic",
+            "Disney Magical World",
+            "Disney Magical World 2",
+            "Disney Infinity (series)",
+            "Disney Tsum Tsum (game)",
+            "Disney Crossy Road",
+            "Disney Emoji Blitz",
+            "Disney Magic Kingdoms",
+            "Disney Getaway Blast"
+        ],
+        "parkAttractions": [
+            "It's a Small World",
+            "Fantasmic!",
+            "Celebrate a Dreams Come True Parade",
+            "Disney Stars and Motorcars Parade",
+            "World of Color",
+            "Stitch Encounter",
+            "Celebrate the Magic",
+            "Wonderful World of Animation"
+        ],
+        "allies": [],
+        "enemies": [],
+        "sourceUrl": "https://disney.fandom.com/wiki/Lilo_Pelekai",
+        "name": "Lilo Pelekai",
+        "imageUrl": "https://static.wikia.nocookie.net/disney/images/1/1f/Profile_-_Lilo.png",
+        "createdAt": "2021-04-12T02:39:38.863Z",
+        "updatedAt": "2021-12-20T20:40:09.571Z",
+        "url": "https://api.disneyapi.dev/characters/5195",
+        "__v": 0
+    }
+}
