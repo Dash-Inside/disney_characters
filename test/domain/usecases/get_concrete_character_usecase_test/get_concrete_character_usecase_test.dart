@@ -16,9 +16,11 @@ const Character character = Character(
   cinemas: ["Star vs. the Forces of Evil"],
   imageLink: 'https://static.wikia.nocookie.net/disney/images/8/8b/Jeremy_Birnbaum.png',
 );
+
 void main() {
-  group('get_concrete_character_usecase_test', () {
-    test('_', () async {
+  test(
+    'get_concrete_character_usecase_test',
+    () async {
       // Act
       final CharacterRepository characterRepository = MockCharacterRepository();
       when(characterRepository.read(id: id)).thenAnswer((_) async {
@@ -34,6 +36,6 @@ void main() {
       //Assert
       verify(characterRepository.read(id: id)).called(1);
       expect(res, const Right(character));
-    });
-  });
+    },
+  );
 }
