@@ -12,8 +12,8 @@ class GetConceteCharactersUseCase extends UseCase<Character, int> {
   });
 
   @override
-  Future<Either<Failure, Character>> call(int p) {
-    // TODO: implement call
-    throw UnimplementedError();
+  Future<Either<Failure, Character>> call(int p) async {
+    Either<Failure, Character> concreteCharacter = await characterRepository.read(id: p);
+    return concreteCharacter;
   }
 }
