@@ -39,7 +39,9 @@ void main() {
       // Act
       final CharacterRepository characterRepository = MockCharacterRepository();
       when(characterRepository.readAll(name: name)).thenAnswer((_) async {
-        return Right(test1);
+        return Right(
+          test1,
+        );
       });
       // Arrange
       final GetAllCharactersByNameUseCase getAllCharactersByNameUseCase = GetAllCharactersByNameUseCase(
