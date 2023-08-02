@@ -1,12 +1,17 @@
 import 'package:flutter/material.dart';
 
+import '../widgets/list_card.dart';
+
 class ListPage extends StatelessWidget {
   const ListPage({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Theme.of(context).colorScheme.surface,
       appBar: AppBar(
+        elevation: 0.0,
+        backgroundColor: Theme.of(context).colorScheme.surface,
         centerTitle: true,
         title: Text("Input"),
         titleTextStyle: TextStyle(
@@ -24,6 +29,14 @@ class ListPage extends StatelessWidget {
             color: Theme.of(context).colorScheme.secondary,
           ),
         ),
+      ),
+      body: Column(
+        children: [
+          ListCard(),
+          ListCard(),
+          ListCard(),
+          ListCard(),
+        ],
       ),
     );
   }
