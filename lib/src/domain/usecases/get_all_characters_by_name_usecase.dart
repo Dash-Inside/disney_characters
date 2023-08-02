@@ -13,8 +13,12 @@ class GetAllCharactersByNameUseCase extends UseCase<List<Character>, String> {
   });
 
   @override
-  Future<Either<Failure, List<Character>>> call(String p) {
-    // TODO: implement call
-    throw UnimplementedError();
+  Future<Either<Failure, List<Character>>> call(String p) async {
+    Either<Failure, List<Character>> listCharacter =
+        await characterRepository.readAll(
+      name: p,
+    );
+
+    return listCharacter;
   }
 }
