@@ -8,5 +8,6 @@ abstract class CharacterRepository {
   Future<Either<Failure, Character>> read({required int id});
 
   /// [readAll] returns Either [Failure] if there is some errors or [List<Character>] if there is no errors
-  Future<Either<Failure, List<Character>>> readAll();
+  /// [readAll] takes [name] that used for search [List<Character>] by [name]
+  Future<Either<Failure, List<Character>>> readAll({required String name});
 }
