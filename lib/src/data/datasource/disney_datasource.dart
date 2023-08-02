@@ -12,10 +12,7 @@ class DisneyDatasourceImpl implements DisneyDatasource {
   Future<CharacterModel> getModelByID(String id) async {
     var url = Uri.https(
       "disneyapi.dev",
-      "/character",
-      {
-        "id": id,
-      },
+      "/character/$id",
     );
     final http.Response response = await http.get(url);
     return CharacterModel.fromJson(response.body);
