@@ -34,13 +34,16 @@ final List<Character> test1 = [character];
 
 const Character character = Character(id: id, name: name, cinemas: cinemas, imageLink: imageLink);
 void main() {
-  group('get_all_characters_by_name_usecase_test', () {
-    test('_', () async {
+  test(
+    'get_all_characters_by_name_usecase_test',
+    () async {
       // Act
       final CharacterRepository characterRepository = MockCharacterRepository();
-      when(characterRepository.readAll(name: name)).thenAnswer((_) async {
-        return Right(test1);
-      });
+      when(characterRepository.readAll(name: name)).thenAnswer(
+        (_) async {
+          return Right(test1);
+        },
+      );
       // Arrange
       final GetAllCharactersByNameUseCase getAllCharactersByNameUseCase = GetAllCharactersByNameUseCase(
         characterRepository: characterRepository,
@@ -50,6 +53,6 @@ void main() {
       // Assert
       verify(characterRepository.readAll(name: name)).called(1);
       expect(res, Right(test1));
-    });
-  });
+    },
+  );
 }
