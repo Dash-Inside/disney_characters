@@ -18,7 +18,13 @@ const List<String> cinemas = [
   "Leroy & Stitch",
   "Once Upon a Halloween",
   "Ralph Breaks the Internet",
-  "Lilo & Stitch (live-action film)"
+  "Lilo & Stitch (live-action film)",
+  "Lilo & Stitch: The Series",
+  "Stitch!",
+  "Stitch & Ai",
+  "A Poem Is...",
+  "It's a Small World: The Animated Series",
+  "At Home With Olaf"
 ];
 const String imageLink = 'https://static.wikia.nocookie.net/disney/images/1/1f/Profile_-_Lilo.png';
 
