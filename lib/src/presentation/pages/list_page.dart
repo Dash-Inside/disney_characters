@@ -13,7 +13,7 @@ class ListPage extends StatelessWidget {
         elevation: 0.0,
         backgroundColor: Theme.of(context).colorScheme.surface,
         centerTitle: true,
-        title: Text("Input"),
+        title: const Text("Input"),
         titleTextStyle: TextStyle(
           letterSpacing: 0.05,
           color: Theme.of(context).colorScheme.secondary,
@@ -30,7 +30,7 @@ class ListPage extends StatelessWidget {
           ),
         ),
       ),
-      body: Column(
+      body: const Column(
         children: [
           ListCard(),
           ListCard(),
